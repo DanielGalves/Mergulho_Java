@@ -1,6 +1,6 @@
 package fundamentos;
 
-public class CalculadoraJurosCompostosFor {
+public class CalculadoraJurosCompostosTempo {
 	public static void main(String Args[]) {
 		double valorAcumulado = 10_000;
 		double taxaJurosMensal = 0.8;
