@@ -52,9 +52,22 @@ public class Main {
 		System.out.println("Novo saldo apos saque");
 		System.out.println("Saldo da conta: " + conta2.saldo );
 		
-		conta2.sacar(7000);
-		System.out.println("Novo saldo apos saque");
-		System.out.println("Saldo da conta: " + conta2.saldo );
+		//saque com teste de exceptions
+		//conta2.sacar(7000);
+		//System.out.println("Novo saldo apos saque");
+		//System.out.println("Saldo da conta: " + conta2.saldo );
+		
+		System.out.println();System.out.println();
+		Pessoa titular3 = new Pessoa("Paulo Pimenta", "987.986.125-49");
+		Conta conta3 = new Conta(titular3, 956, 3, 50_000);
+		
+		System.out.println("Nome do Titular: " + conta3.titular.nome);
+		System.out.println("N° do Documento: " + conta3.titular.documento);
+		System.out.println("Agencia: " + conta3.agencia);
+		System.out.println("Numero da conta: " + conta3.numeroConta);
+		System.out.println("Saldo da conta: " + conta3.saldo);
+		System.out.println();
+		
 	}
 
 }
