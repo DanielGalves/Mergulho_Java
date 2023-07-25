@@ -39,7 +39,7 @@ public class Main {
 		conta2.setTitular(titular2);
 		conta2.setAgencia(1010);
 		conta2.setNumeroConta(2);
-		conta2.setSaldo(10_000);
+		conta2.depositar(10_000);
 		
 		System.out.println("Nome do Titular: " + conta2.getTitular().getNome());
 		System.out.println("N° do Documento: " + conta2.getTitular().getDocumento());
