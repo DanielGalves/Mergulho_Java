@@ -1,4 +1,4 @@
-package OrientacaoObjetos.Banco;
+package OrientacaoObjetos.Banco.modelo;
 
 import java.util.Objects;
 
@@ -9,7 +9,7 @@ public class Conta {
 	private int numeroConta;
 	private double saldo;
 	
-	Conta(Pessoa titular, int agencia, int numeroConta, double saldo){
+	public Conta(Pessoa titular, int agencia, int numeroConta, double saldo){
 		Objects.requireNonNull(titular);
 		this.titular = titular;
 		this.agencia = agencia;
@@ -17,11 +17,11 @@ public class Conta {
 		this.saldo = saldo;		
 	}
 	
-	Conta(){
+	public Conta(){
 		
 	}
 	
-	void depositar(double valor){
+	public void depositar(double valor){
 		
 		if (valor <=0) {
 			throw new IllegalStateException("Valor deve ser maior que zero!");	
@@ -31,7 +31,7 @@ public class Conta {
 		
 	}
 	
-	void sacar(double valor) {
+	public void sacar(double valor) {
 		if (valor <=0) {
 			throw new IllegalStateException("Valor deve ser maior que zero!");	
 		}
@@ -42,7 +42,7 @@ public class Conta {
 		}
 	}
 
-	void sacar(double valor, double taxaSaque) {
+	public void sacar(double valor, double taxaSaque) {
 		sacar(valor + taxaSaque);
 		
 	}
@@ -74,7 +74,6 @@ public class Conta {
 	public double getSaldo() {
 		return saldo;
 	}
-
 	
 	
 	

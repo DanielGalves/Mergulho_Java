@@ -1,4 +1,7 @@
-package OrientacaoObjetos.Banco;
+package OrientacaoObjetos.Banco.app;
+
+import OrientacaoObjetos.Banco.modelo.Conta;
+import OrientacaoObjetos.Banco.modelo.Pessoa;
 
 public class Main {
 	public static void main(String Args[]) {
@@ -11,7 +14,7 @@ public class Main {
 		conta1.setTitular(titular1);
 		conta1.setAgencia(1010);
 		conta1.setNumeroConta(1);
-		conta1.setSaldo(1_000);
+		conta1.depositar(1_000);
 		
 		System.out.println("Nome do Titular: " + conta1.getTitular().getNome());
 		System.out.println("N° do Documento: " + conta1.getTitular().getDocumento());
