@@ -20,6 +20,11 @@ public class Main {
 		System.out.println("Saldo da conta: " + conta1.saldo );
 		System.out.println();
 		
+		
+		conta1.depositar(20_000);
+		System.out.println("Novo saldo apos deposito");
+		System.out.println("Saldo da conta: " + conta1.saldo );
+		
 		Pessoa titular2 = new Pessoa();
 		titular2.nome = "Maria Regina";
 		titular2.documento = "589.654.726-89";
@@ -36,8 +41,14 @@ public class Main {
 		System.out.println("Numero da conta: " + conta2.numeroConta);
 		System.out.println("Saldo da conta: " + conta2.saldo);
 		System.out.println();
-				
 		
+		conta2.sacar(5000);
+		System.out.println("Novo saldo apos saque");
+		System.out.println("Saldo da conta: " + conta2.saldo );
+		
+		conta2.sacar(7000);
+		System.out.println("Novo saldo apos saque");
+		System.out.println("Saldo da conta: " + conta2.saldo );
 	}
 
 }

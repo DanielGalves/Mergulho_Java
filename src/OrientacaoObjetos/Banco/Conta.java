@@ -7,11 +7,25 @@ public class Conta {
 	int numeroConta;
 	double saldo;
 	
-	/*
-	 * void mostrarConta (Conta conta) { System.out.println("Nome do Titular: " +
-	 * conta.nomeTitular); System.out.println("Agencia: " + conta.agencia);
-	 * System.out.println("Numero da conta: " + conta.numeroConta);
-	 * System.out.println("Saldo da conta: " + conta.saldo); }
-	 */
+	void depositar(double valor){
+		
+		if (valor <=0) {
+			throw new IllegalStateException("Valor deve ser maior que zero!");	
+		}
+		
+		saldo = saldo + valor;
+		
+	}
+	
+	void sacar (double valor) {
+		if (valor <=0) {
+			throw new IllegalStateException("Valor deve ser maior que zero!");	
+		}
+		if ( saldo - valor < 0) {
+			throw new IllegalStateException("Saldo Insuficiente");			
+		} else {
+			saldo = saldo - valor;
+		}
+	}
 
 }
