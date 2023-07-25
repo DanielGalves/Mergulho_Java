@@ -17,7 +17,7 @@ public class Conta {
 		
 	}
 	
-	void sacar (double valor) {
+	void sacar(double valor) {
 		if (valor <=0) {
 			throw new IllegalStateException("Valor deve ser maior que zero!");	
 		}
@@ -28,4 +28,9 @@ public class Conta {
 		}
 	}
 
+	void sacar(double valor, double taxaSaque) {
+		sacar(valor + taxaSaque);
+		
+	}
+	
 }

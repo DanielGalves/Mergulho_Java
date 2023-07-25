@@ -25,6 +25,12 @@ public class Main {
 		System.out.println("Novo saldo apos deposito");
 		System.out.println("Saldo da conta: " + conta1.saldo );
 		
+		conta1.sacar(10000, 10);
+		System.out.println("Novo saldo apos saque com taxa de saque");
+		System.out.println("Saldo da conta: " + conta1.saldo );
+		
+		
+		System.out.println();System.out.println();
 		Pessoa titular2 = new Pessoa();
 		titular2.nome = "Maria Regina";
 		titular2.documento = "589.654.726-89";
